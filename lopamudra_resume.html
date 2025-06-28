@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lopamudra Chakravarty - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .header {
+            grid-column: 1 / -1;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            color: #2196F3;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+        
+        .left-column {
+            padding-right: 20px;
+        }
+        
+        .right-column {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #333;
+            border-bottom: 3px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .job {
+            margin-bottom: 20px;
+        }
+        
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            color: #2196F3;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .job-details {
+            display: flex;
+            gap: 15px;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .job-details span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .job ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .job li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .job li:before {
+            content: "•";
+            color: #2196F3;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 3px;
+        }
+        
+        .institution {
+            color: #2196F3;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        
+        .graduation-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-item {
+            background: #2196F3;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .cert-item {
+            background: #fff;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            border-left: 3px solid #2196F3;
+        }
+        
+        .cert-title {
+            font-weight: 600;
+            color: #2196F3;
+            font-size: 0.9rem;
+        }
+        
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .language-name {
+            font-weight: 600;
+        }
+        
+        .language-level {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .skill-list {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .container {
+                max-width: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .right-column {
+                background: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="name">LOPAMUDRA CHAKRAVARTY</h1>
+            <div class="title">Research Assistant - Generative AI and Creative Problem-Solving</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📞 +1(206) 457-9113
+                </div>
+                <div class="contact-item">
+                    ✉️ <a href="mailto:chakravartylopamudra@gmail.com">chakravartylopamudra@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    🔗 <a href="https://www.linkedin.com/in/lopamudra1990">www.linkedin.com/in/lopamudra1990</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="left-column">
+            <div class="section">
+                <h2 class="section-title">EXPERIENCE</h2>
+                
+                <div class="job">
+                    <div class="job-title">Research Assistant - Generative AI and Creative Problem-Solving</div>
+                    <div class="company">University of Washington, Foster School of Business</div>
+                    <div class="job-details">
+                        <span>📅 10/2024 - Present</span>
+                        <span>📍 Seattle, WA</span>
+                    </div>
+                    <ul>
+                        <li>Assisted in developing a Universal AI Community and creating learner-focused content, contributing to research, strategic discussions, and innovative AI-driven operational solutions</li>
+                        <li>Designed and deployed functional digital product portfolios, landing pages, and business sites using AI tools (ChatGPT, Claude, Lovable) and platforms like Replit and GitHub, demonstrating full-cycle ownership, prompt engineering, and low-code execution</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-title">Product Manager</div>
+                    <div class="company">Cuemath</div>
+                    <div class="job-details">
+                        <span>📅 09/2020 - 01/2022</span>
+                        <span>📍 Bangalore, India</span>
+                    </div>
+                    <ul>
+                        <li>Revamped pricing and sales strategy through statistical analysis of customer conversion, 200+ partner center performance, customer demographics, and product mix, leading to a 10% increase in revenue</li>
+                        <li>Performed competitive analysis and designed go-to-market strategy, facilitating new product launches across 100+ partner franchises from inception to production and user acceptance across 4 product portfolios, increasing revenue by $50,000</li>
+                        <li>Analyzed customer feedback across 20+ engagement metrics to identify key opportunities, customized product offerings, and revamped teaching modules, resulting in a 5% increase in customer retention</li>
+                        <li>Collaborated cross-functionally to design a ticketing system for problem resolution and led programs for operational bottleneck improvement, enhancing customer engagement by 7% and customer retention by 45%</li>
+                        <li>Developed heatmaps to track customer-resource allocation, led resource allocation strategy programs, identified constraints, and conducted trade-off business decisions, resulting in a 25% increase in customer satisfaction and engagement</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-title">Technical Consultant - Project Management and Operations</div>
+                    <div class="company">Ministry of Education, Government of India</div>
+                    <div class="job-details">
+                        <span>📅 06/2018 - 06/2020</span>
+                        <span>📍 New Delhi, India</span>
+                    </div>
+                    <ul>
+                        <li>Performed qualitative and quantitative analysis across 200+ past projects to identify key opportunities and developed a roadmap to implement best operational practices across 7 state ministries, reducing project operating margin by 1%</li>
+                        <li>Led digitization efforts across 7 state universities, streamlining operational efficiency by developing a monitoring mechanism to proactively resolve operational bottlenecks, decreasing project completion time by 7%</li>
+                        <li>Analyzed vendor pricing data, lead-time, and contractual obligations, identified key product lines to lead vendor development programs, and redesigned procurement and logistics strategy, leading to a $5M reduction in project costs</li>
+                        <li>Redesigned spares forecasting and inventory target settings by analyzing inventory turns, failure rates, and lead times across 25+ existing projects, increasing spares availability by 15% and achieving cost savings of $12M</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-title">Fellow</div>
+                    <div class="company">Teach for India</div>
+                    <div class="job-details">
+                        <span>📅 06/2016 - 04/2018</span>
+                        <span>📍 Hyderabad, India</span>
+                    </div>
+                    <ul>
+                        <li>Analyzed student performance data across multidimensional parameters to customize and implement varied class content, leading to a 50% increase in average student scores over two years</li>
+                        <li>Developed and built partnerships for educational programs with corporates, analyzed and mitigated risks, and reported progress metrics for fund allocation and utilization, resulting in a 100% on-time program completion rate</li>
+                        <li>Defined student groups by identifying and analyzing multidimensional performance data to implement literacy blocks and create block-specific class curricula for holistic student development</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-title">Project Executive</div>
+                    <div class="company">Vikramshila Resource Education Society</div>
+                    <div class="job-details">
+                        <span>📅 06/2015 - 04/2016</span>
+                        <span>📍 Kolkata, India</span>
+                    </div>
+                    <ul>
+                        <li>Conducted targeted skill development programs resulting in a 7% increase in upskilling, following thorough analysis of educational needs for girls' schools</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">EDUCATION</h2>
+                <div class="education-item">
+                    <div class="degree">Master of Science in Information System</div>
+                    <div class="institution">University of Washington, Foster School of Business</div>
+                    <div class="graduation-date">June 2024 | Seattle, WA</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Master and Bachelor of Arts in Sociology</div>
+                    <div class="institution">University of Calcutta</div>
+                    <div class="graduation-date">August 2014 | Kolkata, India</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-column">
+            <div class="section">
+                <h2 class="section-title">CERTIFICATION</h2>
+                <div class="cert-item">
+                    <div class="cert-title">AWS Certified Cloud Practitioner (Foundational)</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">LinkedIn Learning - Project Management Foundation</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">LinkedIn Learning - GenAI</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">LinkedIn Learning - Cybersecurity</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">LinkedIn Learning - Data Analysis</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">LANGUAGES</h2>
+                <div class="language-item">
+                    <span class="language-name">English</span>
+                    <span class="language-level">Advanced</span>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">SKILLS</h2>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Technical Skills:</div>
+                    <div class="skill-list">Python, SQL, Tableau, Advanced Excel (VLOOKUP, Pivot), AI Ecosystem Understanding (ChatGPT, Claude, Lovable, Replit, GitHub)</div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Program Management/Operations:</div>
+                    <div class="skill-list">Cross-functional Team Leadership, Strategic Planning, Vendor Operations, Project Finance, Process Improvement, Stakeholder Engagement, Forecasting, Resource Allocation, Risk Management, Data-Driven Strategy, Go-to-Market Strategy, Product Customization, Customer Resource Allocation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
